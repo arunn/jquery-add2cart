@@ -1,0 +1,36 @@
+{
+    "name": "add2cart Transfer Effect",
+    "version": "0.1",
+    "title": "jQuery.add2cart()",
+    "author": {
+        "name": "Arun Kumar N",
+        "url": "https://github.com/arunn"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv2",
+            "url": "GPL-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": "1"
+    },
+    "description": "The main purpose of this plugin is for transfer effect and adding to cart effects",
+    "keywords": [
+        "add2cart",
+        "animate",
+        "transfer",
+        "effects",
+		"cart",
+		"add",
+		"move"
+    ],
+    "homepage": "https://github.com/arunn/jquery-add2cart",
+    "files": [
+        "jquery.add2cart.js"
+    ]
+}

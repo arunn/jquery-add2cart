@@ -1,22 +1,59 @@
-<html>
-    <head>
-        <script type='text/javascript' src='http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js'></script>
-        <script type='text/javascript' src='../jquery-add2cart.js'></script>
-        <script type='text/javascript'>
-            $(document).ready(function() {
-                $('#id_ian').click(function(e){
-                    $.add2cart('id_ian', 'id_mom');
-                });
-                
-                $('#id_mom').click(function(e){
-                    $.add2cart('id_mom', 'id_ian');
-                });
-            });
-        </script>
-        
-    </head>
-    <body>
-        <img src='ian_ord.jpg' id='id_ian' alt='Ian Ord' style='padding-right:100px;'/>
-        <img src='shawns_mom.jpg' id='id_mom' alt="Shawn's Mom" style='padding-left:100px;'/>   
-    </body>
+<html> 
+<head> 
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script> 
+	<script type='text/javascript' src='../jquery-add2cart.js'></script> 
+	<script type='text/javascript'> 
+		$(document).ready(function() {
+			$('#id_src').click(function(){ 
+				$.add2cart('id_src', 'id_dst',{opacity: 1, duration: 5000}); 
+				}); 
+			$('#id_dst').click(function(){
+				$.add2cart('id_dst', 'id_src',{ width: '30px', height: '30px', callback: function(){ 
+					alert('Thats the end of magic tricks'); 
+					} 
+				});
+			}); 
+		});
+ </script>
+<style type="text/css">
+body {
+	background-color: #636363;
+}
+
+#id_src {
+	background-color: #DDD;
+	float: left;
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-bottom: 350px;
+	padding: 3px;
+	border: 1px solid #888;
+	border-radius: 3px;
+}
+
+#id_dst {
+	background-color: #DDD; 
+	float:left;
+	margin-left:500px;
+	margin-top:450px;
+	padding: 3px;
+	border: 1px solid #888;
+	border-radius:3px;
+}
+
+.box {
+	background-color: orange;
+	text-align: center; 
+	margin-bottom: 5px;	
+}
+</style>
+</head> 
+
+<body>
+
+ <div id="id_src"><div class="box">Box1</div>Click inside the box to view some magic.</div>
+
+ <div id="id_dst"><div class="box">Box2</div>Some more Magic awaits in this box. </div> 
+
+</body> 
 </html>
